@@ -21,11 +21,16 @@ Projeto full stack com frontend em React (Next.js), backend em Laravel e banco S
    `cd backend`
 2) Instale as dependencias:
    `composer install`
-3) Gere a chave da aplicacao:
+3) Crie o arquivo de ambiente:
+   `copy .env.example .env`
+   (o arquivo `.env` e necessario para a aplicacao ler as configuracoes locais)
+4) Gere a chave da aplicacao:
    `php artisan key:generate`
-4) Crie o banco e os usuarios de seed:
+5) Crie o arquivo do banco SQLite:
+   `New-Item -ItemType File -Force database\database.sqlite`
+6) Crie o banco e os usuarios de seed:
    `php artisan migrate:fresh --seed`
-5) Inicie o servidor:
+7) Inicie o servidor:
    `php artisan serve`
 
 O backend roda em `http://127.0.0.1:8000`.
